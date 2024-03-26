@@ -7,8 +7,6 @@ pipeline {
                 sh 'python3 helloworld.py'
             }
         }
-    }
-    stages {
         stage('List') {
             steps {
                 sh 'ls'
