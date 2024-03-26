@@ -15,6 +15,7 @@ pipeline {
         stage('Read') {
             steps {
                 sh 'python3 readcfg.py > output.txt'
+                sh 'output.txt'
             }
         }
     }
