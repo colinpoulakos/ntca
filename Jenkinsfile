@@ -12,5 +12,10 @@ pipeline {
                 sh 'ls'
             }
         }
+        stage('Read') {
+            steps {
+                sh 'python3 readcfg.py'
+            }
+        }
     }
 }
