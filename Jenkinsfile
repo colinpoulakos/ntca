@@ -18,5 +18,10 @@ pipeline {
                 sh 'cat output.txt'
             }
         }
+        stage('Ansible Lint') {
+            steps {
+                sh 'ansible-line '
+            }
+        }
     }
 }
