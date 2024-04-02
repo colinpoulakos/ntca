@@ -22,7 +22,6 @@ pipeline {
             steps {
                 sh 'ansible-galaxy collection install arista.eos'
                 sh 'ansible-lint bgp.yml >> lintout.txt'
-                sh 'cat lintout.txt'
             }
         }
         stage('Ansible Lintout') {
