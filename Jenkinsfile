@@ -14,13 +14,14 @@ pipeline {
         }
         stage('Read') {
             steps {
-                sh 'python3 readcfg.py > output.txt'
+                sh 'python3 readcfg.py >> output.txt'
                 sh 'cat output.txt'
             }
         }
         stage('Ansible Lint') {
             steps {
-                sh 'ansible-lint init-routing-bgp.yml'
+                sh 'ansible-lint init-routing-bgp.yml >> lintout.txt'
+                sh 'cat lintout.txt'
             }
         }
     }
