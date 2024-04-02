@@ -20,9 +20,9 @@ pipeline {
         }
         stage('Ansible Lint') {
             steps {
-                sh 'ansible-lint --version'
                 sh 'ansible-galaxy collection install arista.eos'
-                sh 'ansible-lint bgp.yml'
+                sh 'ansible-lint bgp.yml >> lintout.txt'
+                sh 'cat lintout.txt'
             }
         }
     }
