@@ -25,5 +25,10 @@ pipeline {
                 sh 'cat lintout.txt'
             }
         }
+        stage('Ansible Lintout') {
+            steps {
+                sh 'cat lintout.txt'
+            }
+        }
     }
 }
