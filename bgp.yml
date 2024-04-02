@@ -9,7 +9,7 @@
 
   tasks:
     - name: Create Ethernet1 and Ethernet2 Internal Interfaces
-      arista.eos.eos_interfaces:
+      arista.eos.eos_config:
         config:
           - name: Ethernet1
             enabled: true
