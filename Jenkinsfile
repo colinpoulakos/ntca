@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Ansible Lint') {
             steps {
-                sh 'ansible-lint --version'
+                sh 'ansible-lint init-routing-bgp.yml'
             }
         }
     }
