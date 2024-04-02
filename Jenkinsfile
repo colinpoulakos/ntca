@@ -20,8 +20,7 @@ pipeline {
         }
         stage('Ansible Lint') {
             steps {
-                sh 'ansible-lint init-routing-bgp.yml >> lintout.txt'
-                sh 'cat lintout.txt'
+                sh 'ansible-lint bgp.yml'
             }
         }
     }
