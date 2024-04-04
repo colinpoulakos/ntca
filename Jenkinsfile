@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Ansible Lintout') {
+        stage('Ansible Lint') {
             steps {
-                sh 'cat lintout.txt'
+                sh 'ansible-lint --version'
+                sh 'ansible-lint bgp.yml'
             }
         }
     }
