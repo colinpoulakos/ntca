@@ -5,7 +5,7 @@ pipeline {
         stage('Ansible Lint') {
             steps {
                 sh 'ansible-lint --version'
-                sh 'ansible-lint bgp2.yml'
+                sh 'ansible-lint bgp.yml'
             }
         }
     }
