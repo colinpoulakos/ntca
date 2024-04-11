@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Ansible Lint') {
             steps {
-                sh 'ansible-lint bgp.yml'
+                sh 'ansible-lint bgp2.yml'
             }
         }
     }
